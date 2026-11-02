@@ -1,0 +1,206 @@
+﻿#include "CGameObject.h"
+#include "CPrototypeManager.h"
+#include "CEditor.h"
+#include "CManagement.h"
+#include "CLayerHelper.h"
+
+CGameObject::CGameObject(LPDIRECT3DDEVICE9 pGraphicDev)
+    : m_pGraphicDevice(pGraphicDev), m_bDisplayInEditor(false), m_bIsDestroy(FALSE)
+{
+	m_pGraphicDevice->AddRef();
+}
+
+CGameObject::CGameObject(const CGameObject& rhs)
+	: m_pGraphicDevice(rhs.m_pGraphicDevice), m_bDisplayInEditor(false), m_bIsDestroy(FALSE)
+{
+	m_pGraphicDevice->AddRef();
+}
+
+CGameObject::~CGameObject()
+{
+}
+
+void CGameObject::DontDestroySceneLoad(CGameObject* pObj)
+{
+    CManagement::GetInstance()->Add_CacheObject(pObj);
+}
+
+void CGameObject::Init_Layer(const wstring& wLayerTag, const wstring& wObjectKey)
+{
+    m_tLayerMask.eLayerID = CLayerHelper::GetInstance()->GetLayerIDByName(wLayerTag);
+    m_tLayerMask.wsLayerTag = wLayerTag;
+    m_tLayerMask.wsObjectKey = wObjectKey;
+}
+
+const LayerMask& CGameObject::Get_Object_LayerMask() { return m_tLayerMask; }
+LayerMask& CGameObject::Get_LayerMask() { return m_tLayerMask; }
+
+// 기존에 사용하던 가지고 있는 컴포넌트의 wstring 테그를 통한 검색
+CComponent* CGameObject::Get_Component(COMPONENTID eID, const wstring& wsComponentKey)
+{
+	CComponent* pComponent(nullptr);
+
+	if (pComponent = Find_Component(eID, wsComponentKey))
+		return pComponent;
+	else
+		return nullptr;
+}
+// 컴포넌트 타입을 검색해서 맨 먼저 발견된 첫번째 컴포넌트를 반환
+CComponent* CGameObject::Get_Component(COMPONENTID eID, PROTOTYPE_COMPONENT ePrototype)
+{
+    auto iter = find_if(m_umComponent[eID].begin(), m_umComponent[eID].end()
+        , [&ePrototype](const pair<const wstring, CComponent*>& pair) -> _bool {
+            if (pair.second->Get_ComponentType() == ePrototype)
+                return true;
+
+            return false;
+        });
+
+    if (iter == m_umComponent[eID].end()) return nullptr;
+
+    return iter->second;
+}
+
+void CGameObject::Get_Components(COMPONENTID eID, PROTOTYPE_COMPONENT ePrototype, vector<CComponent*>& outVector)
+{
+    outVector.clear();
+    outVector.reserve(m_umComponent[eID].size());
+
+    for_each(m_umComponent[eID].begin(), m_umComponent[eID].end(),
+        [=, &outVector](const pair<const wstring, CComponent*>& pair) -> void {
+            if (pair.second->Get_ComponentType() == ePrototype)
+                outVector.push_back(pair.second);
+        });
+}
+
+CComponent* CGameObject::Find_Component(COMPONENTID eID, const wstring& wsComponentTag)
+{
+	auto iter = find_if(m_umComponent[eID].begin(), m_umComponent[eID].end()
+		, [&wsComponentTag](const pair<const wstring, CComponent*>& pair) -> _bool {
+			if (pair.first == wsComponentTag)
+				return true;
+
+			return false;
+		});
+
+	if (iter == m_umComponent[eID].end()) return nullptr;
+
+	return iter->second;
+}
+
+HRESULT CGameObject::Ready_GameObject()
+{
+	return S_OK;
+}
+
+_int CGameObject::Update_GameObject(const _float fTimeDelta)
+{
+    _int iResult(0);
+    for (size_t i = 0; i < ID_END; ++i)
+        for (auto iter = m_umComponent[i].begin(); iter != m_umComponent[i].end(); )
+        {
+            if (m_bIsDestroy)
+                iter->second->Set_Destroy();
+
+            iResult = iter->second->Update_Component(fTimeDelta);
+
+            if (iResult)
+            {
+                CComponent* pComponent = iter->second;
+                iter = m_umComponent[i].erase(iter);
+                Safe_Release(pComponent);
+
+                continue;
+            }
+            ++iter;
+        }
+
+	return m_bIsDestroy;
+}
+
+void CGameObject::LateUpdate_GameObject(const _float fTimeDelta)
+{
+	for_each(m_umComponent[ID_DYNAMIC].begin(), m_umComponent[ID_DYNAMIC].end()
+		, [fTimeDelta](const pair<const wstring, CComponent*>& pair) -> void {
+            if (pair.second)
+			    pair.second->LateUpdate_Component();
+		});
+}
+
+void CGameObject::Free()
+{
+	for (_int i = 0; i < ID_END; ++i)
+	{
+        for_each(m_umComponent[i].begin(), m_umComponent[i].end(),
+            [](pair<const wstring, CComponent*>& pair) -> void {
+                pair.second->Set_Destroy();
+                Safe_Release(pair.second);
+            });
+		m_umComponent[i].clear();
+	}
+
+	Safe_Release(m_pGraphicDevice);
+}
+
+void	CGameObject::Display_Editor()
+{
+	if (!m_bDisplayInEditor)
+		return;
+
+    bool bOpen = ImGui::Begin("Main Editor");
+    if (bOpen)
+    {
+        ImGui::Columns(2, "MainEditorColumns", true);
+
+        ImGui::BeginChild("LeftColumn", ImVec2(0, 0), true);
+        {
+
+        }
+        ImGui::EndChild();
+
+        ImGui::NextColumn();
+
+        ImGui::BeginChild("Object Info", ImVec2(0, 0), true);
+        {
+            ImGui::Text("[ Component ]");
+
+            _int dwIndex = 0;
+            for (int i = ID_DYNAMIC; i < ID_END; ++i)
+            {
+                for (auto& component : m_umComponent[i])
+                {
+                    if (ImGui::CollapsingHeader(component.second->m_szDisplayName, component.second->m_bDisplayInEditor))
+                    {
+                        component.second->Display_Editor(m_szBuffer);
+                    }
+                }
+            }
+#pragma endregion
+
+#pragma region Data
+            ImGui::Text("[ Data ]");
+
+            for (auto& field : m_EditorFieldList)
+            {
+                ImGui::PushItemWidth(120);
+
+                CEditor::GetInstance()->Display_Editor(field);
+
+                ImGui::PopItemWidth();
+            }
+
+
+        }
+        ImGui::EndChild();
+
+        ImGui::Columns(1);
+
+        ImGui::End();
+    }
+}
+
+void CGameObject::Set_EditorDisplayName(wstring wsName)
+{
+    wcscpy_s(m_szDisplayName, wsName.c_str());
+    WideCharToMultiByte(CP_UTF8, 0, m_szDisplayName, -1, m_szBuffer, 256, nullptr, nullptr);
+}

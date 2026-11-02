@@ -1,0 +1,165 @@
+﻿#include "CRenderer.h"
+
+IMPLEMENT_SINGLETON(CRenderer)
+
+CRenderer::CRenderer()
+	: m_iDrawCalls(0)
+{
+}
+
+CRenderer::~CRenderer()
+{
+	Free();
+}
+
+void CRenderer::Add_RenderGroup(RENDERID eID, CGameObject* pGameObject)
+{
+	if (RENDER_END <= eID || eID < 0 || pGameObject == nullptr)
+		return;
+    if (pGameObject->Is_Destroy()) return;
+
+	m_RenderGroup[eID].push_back(pGameObject);
+	pGameObject->AddRef();
+}
+
+void CRenderer::Render_GameObject(LPDIRECT3DDEVICE9& pGraphicDev)
+{
+	m_iDrawCalls = 0;
+
+	Render_Priority(pGraphicDev);
+	Render_NonAlpha(pGraphicDev);
+	Render_Alpha(pGraphicDev);
+	Render_UI(pGraphicDev);
+
+	Clear_RenderGroup();
+}
+
+void CRenderer::Clear_RenderGroup()
+{
+	for (size_t i = 0; i < RENDER_END; ++i)
+	{
+		for_each(m_RenderGroup[i].begin(), m_RenderGroup[i].end(), CDeleteObj());
+		m_RenderGroup[i].clear();
+	}
+}
+
+void CRenderer::Render_Priority(LPDIRECT3DDEVICE9& pGraphicDev)
+{
+	for_each(m_RenderGroup[RENDER_PRIORITY].begin(), m_RenderGroup[RENDER_PRIORITY].end()
+		, [](CGameObject* pGameObject) -> void {
+			pGameObject->Render_GameObject();
+		});
+}
+
+void CRenderer::Render_NonAlpha(LPDIRECT3DDEVICE9& pGraphicDev)
+{
+	for_each(m_RenderGroup[RENDER_NONALPHA].begin(), m_RenderGroup[RENDER_NONALPHA].end()
+		, [](CGameObject* pGameObject) -> void {
+			pGameObject->Render_GameObject();
+		});
+}
+
+void CRenderer::Render_Alpha(LPDIRECT3DDEVICE9& pGraphicDev)
+{
+    pGraphicDev->SetRenderState(D3DRS_ZENABLE, TRUE);
+
+    // 알파 블렌딩 ON
+    pGraphicDev->SetRenderState(D3DRS_ALPHABLENDENABLE, TRUE);
+    pGraphicDev->SetRenderState(D3DRS_SRCBLEND, D3DBLEND_SRCALPHA);
+    pGraphicDev->SetRenderState(D3DRS_DESTBLEND, D3DBLEND_INVSRCALPHA);
+
+    {
+        // 이거 써도 되는건가...
+        pGraphicDev->SetRenderState(D3DRS_ZWRITEENABLE, TRUE);
+        //pGraphicDev->SetRenderState(D3DRS_ALPHATESTENABLE, TRUE);
+        pGraphicDev->SetRenderState(D3DRS_ALPHAFUNC, D3DCMP_GREATER);
+        pGraphicDev->SetRenderState(D3DRS_ALPHAREF, 0);
+    }
+
+    // Z값 기준 정렬 (카메라와 멀리 있는 것부터)
+    m_RenderGroup[RENDER_ALPHA].sort(
+        [](CGameObject* pLeft, CGameObject* pRight) -> _bool
+        {
+            return pLeft->Get_ViewZ() > pRight->Get_ViewZ();
+        });
+
+    for (auto& pObj : m_RenderGroup[RENDER_ALPHA])
+    {
+        if (pObj)
+            pObj->Render_GameObject();
+    }
+    
+    pGraphicDev->SetRenderState(D3DRS_ALPHABLENDENABLE, FALSE);
+    pGraphicDev->SetRenderState(D3DRS_ZWRITEENABLE, TRUE);
+}
+
+// 직교 투영 적용
+void CRenderer::Render_UI(LPDIRECT3DDEVICE9& pGraphicDev)
+{
+    pGraphicDev->SetRenderState(D3DRS_LIGHTING, FALSE);
+
+
+    _matrix matOldView, matOldProj;
+    pGraphicDev->GetTransform(D3DTS_VIEW, &matOldView);
+    pGraphicDev->GetTransform(D3DTS_PROJECTION, &matOldProj);
+    pGraphicDev->SetRenderState(D3DRS_CULLMODE, D3DCULL_NONE);
+
+    // 알파블렌딩
+    pGraphicDev->SetRenderState(D3DRS_ALPHABLENDENABLE, TRUE);
+    pGraphicDev->SetRenderState(D3DRS_SRCBLEND, D3DBLEND_SRCALPHA);
+    pGraphicDev->SetRenderState(D3DRS_DESTBLEND, D3DBLEND_INVSRCALPHA);
+
+    _matrix matView, matProj;
+    // 뷰행렬 초기화, 카메라 적용x
+    D3DXMatrixIdentity(&matView);
+    pGraphicDev->SetTransform(D3DTS_VIEW, &matView);
+
+    // 직교 투영
+    //D3DXMatrixOrthoLH(&matProj, (float)WINCX , (float)WINCY, 0.f, 1.f);
+    D3DXMatrixOrthoOffCenterLH(
+        &matProj,
+        0.f, (float)WINCX,    // left, right
+        (float)WINCY, 0.f,    // bottom, top
+        0.f, 1.f              // near, far
+    );
+    pGraphicDev->SetTransform(D3DTS_PROJECTION, &matProj);
+    //z버퍼 끄기
+    //pGraphicDev->SetRenderState(D3DRS_ZENABLE, FALSE);
+
+    /*우선 순위 정해주기(이거 빼도 갑자기 됨.. 이유 모름) */
+    auto& ListUI = m_RenderGroup[RENDER_UI];
+
+    ListUI.sort([](CGameObject* a, CGameObject* b)
+        {
+            return a->Get_RenderPriority() < b->Get_RenderPriority();
+        });
+
+
+    for_each(ListUI.begin(), ListUI.end(),
+        [](CGameObject* pObj)
+        {
+            if (pObj)
+                pObj->Render_GameObject();
+        });
+    
+    //for_each(m_RenderGroup[RENDER_UI].begin(), m_RenderGroup[RENDER_UI].end()
+    //    , [](CGameObject* pGameObject) -> void {
+    //        pGameObject->Render_GameObject();
+    //    });
+
+
+    // 복원
+    pGraphicDev->SetRenderState(D3DRS_ALPHABLENDENABLE, FALSE);
+    pGraphicDev->SetRenderState(D3DRS_ZWRITEENABLE, TRUE);
+
+    pGraphicDev->SetRenderState(D3DRS_CULLMODE, D3DCULL_CCW);
+    //pGraphicDev->SetRenderState(D3DRS_ZENABLE, TRUE);
+    pGraphicDev->SetTransform(D3DTS_VIEW, &matOldView);
+    pGraphicDev->SetTransform(D3DTS_PROJECTION, &matOldProj);
+
+}
+
+void CRenderer::Free()
+{
+	Clear_RenderGroup();
+}

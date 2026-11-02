@@ -1,0 +1,1122 @@
+{
+ "source_repository": "SoExDobin/Moonlighter-DX9 (private team repository)",
+ "source_branch": "develop",
+ "source_commit": "40e6c13563ccd9f104fd2e14ce95154e9f454ac2",
+ "attribution": "line counts from git blame on the source commit; they show who last edited each line, not total contribution",
+ "files": [
+  {
+   "path": "Base/CBase.h",
+   "lines": 20,
+   "soexdobin_lines": 17,
+   "soexdobin_share": 0.85,
+   "other_authors": {
+    "JiyeonJeong01": 3
+   },
+   "sha256": "03fc939fd1b683bb539de28cb5c6dc66435fff067518f3769e09b182fbca94be"
+  },
+  {
+   "path": "Base/CBase.inl",
+   "lines": 28,
+   "soexdobin_lines": 27,
+   "soexdobin_share": 0.96,
+   "other_authors": {
+    "JiyeonJeong01": 1
+   },
+   "sha256": "9e21d526044d30f80350aacb702cc3bd3bd8f7080e8434d1273f85154c69d4b4"
+  },
+  {
+   "path": "Client/Code/CBoss3Body.cpp",
+   "lines": 60,
+   "soexdobin_lines": 60,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "45dc489a832ad9c92950eab4ef05483d0ca7501c233a2581439a1f9ba64b2ea3"
+  },
+  {
+   "path": "Client/Code/CBoss3CircleBody.cpp",
+   "lines": 352,
+   "soexdobin_lines": 352,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "33608cb04d2ad3042a9873749da45d5286b82afe2315c93fe3b0da33695f730f"
+  },
+  {
+   "path": "Client/Code/CBoss3DiamondBody.cpp",
+   "lines": 346,
+   "soexdobin_lines": 346,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "85d9eddff024a3c2e32a7caaabeed75c559a3a319d3e4153ff12a33896764038"
+  },
+  {
+   "path": "Client/Code/CBoss3HeadMovement.cpp",
+   "lines": 111,
+   "soexdobin_lines": 111,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "cd3f296d2f6151dd26169a45258afe7d2a6a3accf4e95e0fa702ace7734baaa3"
+  },
+  {
+   "path": "Client/Code/CBoss3IntroCover.cpp",
+   "lines": 82,
+   "soexdobin_lines": 82,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "7fc06947e34630622a21c89c2a06979d2339ab6cb07490e64b789c1dc2c15d01"
+  },
+  {
+   "path": "Client/Code/CBoss3SquareBody.cpp",
+   "lines": 323,
+   "soexdobin_lines": 323,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "4e88ee82955795aa52df2f6f1f2085864c2018ef3e1fada4d80bb91eae4373b3"
+  },
+  {
+   "path": "Client/Code/CBoss3TriangleBody.cpp",
+   "lines": 322,
+   "soexdobin_lines": 322,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "828c15661ba56ef735cc4c8c94f90872f585261291f8ec174187db289d641aa9"
+  },
+  {
+   "path": "Client/Code/CBossDesert.cpp",
+   "lines": 623,
+   "soexdobin_lines": 623,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "b33853a4006982b678fed09f825bed4a82b1b11cf0fc0ba14ffe1ff5498bbc55"
+  },
+  {
+   "path": "Client/Code/CBossDesertHPBar.cpp",
+   "lines": 231,
+   "soexdobin_lines": 231,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "c0e0baa6332dec9e570a21af8f233db89aedd8db94ebc3744f72edd135328354"
+  },
+  {
+   "path": "Client/Code/CBossDesertLavaField.cpp",
+   "lines": 94,
+   "soexdobin_lines": 94,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "7ee500a652ebeef734ca6bf57f45aab1542ffb4d85175561b91fa7fc5a853858"
+  },
+  {
+   "path": "Client/Code/CBossDesertProjectile.cpp",
+   "lines": 95,
+   "soexdobin_lines": 95,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "a08ea551edb5455fef3bc6f57aabeb62c753421753848fb364033431ff5b0b6a"
+  },
+  {
+   "path": "Client/Code/CBossDesertProjectile2.cpp",
+   "lines": 146,
+   "soexdobin_lines": 146,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "b82397448e5707a595148f323443da5ecaabc6a6cd34c4573e0355b9d97121c7"
+  },
+  {
+   "path": "Client/Code/CBossDesertProjectile3.cpp",
+   "lines": 115,
+   "soexdobin_lines": 115,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "d0d402261dc31f77417aea8202334864367db404dd50cd3e628dda4017d9bd60"
+  },
+  {
+   "path": "Client/Code/CExampleManager.cpp",
+   "lines": 49,
+   "soexdobin_lines": 49,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "66cdf176bfa3281c0d00f9943fd18022420a7929fb067d43c262a7fba5e3c517"
+  },
+  {
+   "path": "Client/Code/CExampleObject.cpp",
+   "lines": 95,
+   "soexdobin_lines": 94,
+   "soexdobin_share": 0.99,
+   "other_authors": {
+    "JiyeonJeong01": 1
+   },
+   "sha256": "a3bf2c19e3e0e5a4b9bfe6eb55eb4f24990bba16e265f720f822feb98262de22"
+  },
+  {
+   "path": "Client/Code/CFadeManager.cpp",
+   "lines": 73,
+   "soexdobin_lines": 73,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "77ab38142496b3e596d721abd774e452920e32c95b7dc3ca291d37cec4a23b19"
+  },
+  {
+   "path": "Client/Code/CFadeUI.cpp",
+   "lines": 151,
+   "soexdobin_lines": 143,
+   "soexdobin_share": 0.95,
+   "other_authors": {
+    "JiyeonJeong01": 8
+   },
+   "sha256": "8652839f422f031203a73ace017fccb12a10f7e8c12fc1ff304ed8ebf58ec217"
+  },
+  {
+   "path": "Client/Code/CFireMob.cpp",
+   "lines": 280,
+   "soexdobin_lines": 280,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "02f4f32429132505315c482636a579149bf1a76ace1181cf2425aaf0cc0ac545"
+  },
+  {
+   "path": "Client/Code/CLogoScene.cpp",
+   "lines": 140,
+   "soexdobin_lines": 110,
+   "soexdobin_share": 0.79,
+   "other_authors": {
+    "chaerim": 23,
+    "LCrim": 3,
+    "Trevorjun": 4
+   },
+   "sha256": "105e8d45a2d51f8c4d6fb97c3de7d0dd5af5748934603f1e82464f28113092f1"
+  },
+  {
+   "path": "Client/Code/CMainApp.cpp",
+   "lines": 222,
+   "soexdobin_lines": 143,
+   "soexdobin_share": 0.64,
+   "other_authors": {
+    "LeeSunJae": 22,
+    "JiyeonJeong01": 21,
+    "chaerim": 17,
+    "LCrim": 17,
+    "Trevorjun": 2
+   },
+   "sha256": "5b6eab02b0fe9d4ab4211cd6b5366abd413f2b6f97ba13e057f601560188965e"
+  },
+  {
+   "path": "Client/Code/CTmpCustomComponent.cpp",
+   "lines": 60,
+   "soexdobin_lines": 60,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "51ec9bfb1a0d5134b86e17da0e6a774179ade37f6f53c0748ed7dcf260f2e11f"
+  },
+  {
+   "path": "Client/Code/CTrigger.cpp",
+   "lines": 108,
+   "soexdobin_lines": 106,
+   "soexdobin_share": 0.98,
+   "other_authors": {
+    "JiyeonJeong01": 2
+   },
+   "sha256": "17c3837385911d1176350c3578872037188b43bba67eace7af41041b0809e1a5"
+  },
+  {
+   "path": "Client/Code/CWallChecker.cpp",
+   "lines": 122,
+   "soexdobin_lines": 122,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "cac126e847c25add9b1132cf6d1e8f0fb5dc8b35c9960495bd150d3060790eab"
+  },
+  {
+   "path": "Client/Header/CBoss3Body.h",
+   "lines": 53,
+   "soexdobin_lines": 53,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "ac2f97737fc7c3a77545463c7f4c1f97258f917d8c74034ef9746ddcd1095992"
+  },
+  {
+   "path": "Client/Header/CBoss3CircleBody.h",
+   "lines": 62,
+   "soexdobin_lines": 62,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "9693ef4297591a9aeaa8c7ab7f4c460d7b1980b0da95955eab9980a8c6fe588e"
+  },
+  {
+   "path": "Client/Header/CBoss3DiamondBody.h",
+   "lines": 60,
+   "soexdobin_lines": 60,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "1a95d5baed2045f39996ee747dcb48030393292908f97aeba1a6e0cb9b93de4a"
+  },
+  {
+   "path": "Client/Header/CBoss3HeadMovement.h",
+   "lines": 55,
+   "soexdobin_lines": 55,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "d9f285e234b9abc2f6fb985afdda18178aae242dea1a9f60f86b30d8c7368971"
+  },
+  {
+   "path": "Client/Header/CBoss3IntroCover.h",
+   "lines": 29,
+   "soexdobin_lines": 29,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "6e11fae32fadf510b71652aec3d86fa181e468929343ddfc1de71696f7fe275d"
+  },
+  {
+   "path": "Client/Header/CBoss3SquareBody.h",
+   "lines": 55,
+   "soexdobin_lines": 55,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "b4b8dcda56ee3d976d40c1f44baec3eb44707529d24377395ad7e5a9d1ed8b03"
+  },
+  {
+   "path": "Client/Header/CBoss3TriangleBody.h",
+   "lines": 55,
+   "soexdobin_lines": 55,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "bcc2d3be48f82f9765e7c6f4b0700cfee5d50eb6abe870d80de8a34ba0403ae3"
+  },
+  {
+   "path": "Client/Header/CBossDesert.h",
+   "lines": 107,
+   "soexdobin_lines": 107,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "69ea0483e76c1307958065b931561da0c47513fad0586ae7a8144e0d71d5f2bb"
+  },
+  {
+   "path": "Client/Header/CBossDesertHPBar.h",
+   "lines": 59,
+   "soexdobin_lines": 59,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "326f85329356cae85dcd154c4779717b7e175ad89e1cd1006cfb11b92006584c"
+  },
+  {
+   "path": "Client/Header/CBossDesertLavaField.h",
+   "lines": 31,
+   "soexdobin_lines": 31,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "2a108b6512a32af99c1568411c6046f0c9951d9390bc53443f8f18d8171dada0"
+  },
+  {
+   "path": "Client/Header/CBossDesertProjectile.h",
+   "lines": 31,
+   "soexdobin_lines": 31,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "421f8bacb2aa1cfe408653bce4026c7cdaef555bc3aae3fd178c9f266d0f39d1"
+  },
+  {
+   "path": "Client/Header/CBossDesertProjectile2.h",
+   "lines": 49,
+   "soexdobin_lines": 49,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "5a37c587fd64a2dee76871e2238686ee2773b606b5454ad6b2859bbefe15dff4"
+  },
+  {
+   "path": "Client/Header/CBossDesertProjectile3.h",
+   "lines": 40,
+   "soexdobin_lines": 40,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "2a8596121f20e07dfc95f06a4a33f34ffa5997a211404c00979dc41dac5f4f31"
+  },
+  {
+   "path": "Client/Header/CExampleManager.h",
+   "lines": 37,
+   "soexdobin_lines": 37,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "9e090c16aeb56bd0d5dc3e74dfdc40a6b5f3f9b4c30b50f7efee51071f21e1c2"
+  },
+  {
+   "path": "Client/Header/CExampleObject.h",
+   "lines": 43,
+   "soexdobin_lines": 43,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "8724b0a5ec38452294dec022af93bde1b9e65fc74014137637061c723293c262"
+  },
+  {
+   "path": "Client/Header/CFadeManager.h",
+   "lines": 31,
+   "soexdobin_lines": 31,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "c50ece6aac5e38cb0d7cc065b76ad0d8500fa2507154d612ccbf2b3118f2fdac"
+  },
+  {
+   "path": "Client/Header/CFadeUI.h",
+   "lines": 51,
+   "soexdobin_lines": 51,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "cc6a5e2ced779ec20e19649522b5752390c547262d3c0a7cf316ea55412c4697"
+  },
+  {
+   "path": "Client/Header/CFireMob.h",
+   "lines": 63,
+   "soexdobin_lines": 63,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "a7b616ba861103d93ecf130f573fb8ed0c3fc2d0dfad87a04805968762e0343d"
+  },
+  {
+   "path": "Client/Header/CLogoScene.h",
+   "lines": 26,
+   "soexdobin_lines": 26,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "6b24650a4e83b6b81b1c5557be7fad112294269a51617534a297b9a4d387fba6"
+  },
+  {
+   "path": "Client/Header/CMainApp.h",
+   "lines": 41,
+   "soexdobin_lines": 41,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "4e4084d65bd5be1d7319b2409e1ba9f9de0f1828fc90eb46e2586a6d26643f87"
+  },
+  {
+   "path": "Client/Header/CTmpCustomComponent.h",
+   "lines": 29,
+   "soexdobin_lines": 29,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "f6d575cfc57f521f0b34c98c16e29511d6a877741c811c1a1fa34f5a1d00a3b3"
+  },
+  {
+   "path": "Client/Header/CTrigger.h",
+   "lines": 49,
+   "soexdobin_lines": 42,
+   "soexdobin_share": 0.86,
+   "other_authors": {
+    "JiyeonJeong01": 7
+   },
+   "sha256": "13c1c583fad11555ccea537ef6b9c9ce43f6f62eeed51fe17f1d8a2f5ca97eb5"
+  },
+  {
+   "path": "Client/Header/CWallChecker.h",
+   "lines": 51,
+   "soexdobin_lines": 51,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "7d35e6624344994601583551aba7eb5fac277033e1c91542762ae9b3675f7a66"
+  },
+  {
+   "path": "Client/Include/CBossDesertBodyHpBar.cpp",
+   "lines": 308,
+   "soexdobin_lines": 308,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "62c5ec41a3d17713f9817cd0389cebc3ff3ea10ddc0f1c67872955d0a8132206"
+  },
+  {
+   "path": "Client/Include/CBossDesertBodyHpBar.h",
+   "lines": 69,
+   "soexdobin_lines": 69,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "99cd95ea4c7fa54139010504f487f3727ea1ef07592e8911eb2309671c365521"
+  },
+  {
+   "path": "Engine/Code/CCollider.cpp",
+   "lines": 178,
+   "soexdobin_lines": 178,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "ef8563af13db2e7a465c90cb8e27e18f0892c13783bf1ebf1ec6e0e031c20928"
+  },
+  {
+   "path": "Engine/Code/CCollisionManager.cpp",
+   "lines": 245,
+   "soexdobin_lines": 245,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "c86f0f31368554388f73dafa08e4b37f19c05b65c0d5969e431739ecdca30175"
+  },
+  {
+   "path": "Engine/Code/CComponent.cpp",
+   "lines": 47,
+   "soexdobin_lines": 47,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "2e4c8dfbce1e2e91355e7322d8270539dd8dd6aa81c52976cef1c0c5769c6edc"
+  },
+  {
+   "path": "Engine/Code/CCubeTex.cpp",
+   "lines": 118,
+   "soexdobin_lines": 118,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "01db31384ff2ff841f0f011c9bb611727cdf27e470edc107ff7ce7e7c9e18061"
+  },
+  {
+   "path": "Engine/Code/CDInputManager.cpp",
+   "lines": 78,
+   "soexdobin_lines": 58,
+   "soexdobin_share": 0.74,
+   "other_authors": {
+    "LeeSunJae": 14,
+    "chaerim": 6
+   },
+   "sha256": "7b8517649c432980fd4a5effd4285062ba22a90254a7ea92b5158fc81a70476a"
+  },
+  {
+   "path": "Engine/Code/CEditor.cpp",
+   "lines": 435,
+   "soexdobin_lines": 339,
+   "soexdobin_share": 0.78,
+   "other_authors": {
+    "JiyeonJeong01": 96
+   },
+   "sha256": "e7f6424db8957526392f133044318d8e172ffb5c8723d44db9a884f3bdef237f"
+  },
+  {
+   "path": "Engine/Code/CFont.cpp",
+   "lines": 97,
+   "soexdobin_lines": 63,
+   "soexdobin_share": 0.65,
+   "other_authors": {
+    "LCrim": 29,
+    "chaerim": 5
+   },
+   "sha256": "74beb14a84f76a03dd7e7ab3eb2dfa8b705ede0a72e5d796243be909dd5e0afd"
+  },
+  {
+   "path": "Engine/Code/CFrame.cpp",
+   "lines": 50,
+   "soexdobin_lines": 50,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "8da97cf01781cda7c666d894f6533f6fba467163498d0910d1f90497c767ebfb"
+  },
+  {
+   "path": "Engine/Code/CFrameManager.cpp",
+   "lines": 105,
+   "soexdobin_lines": 97,
+   "soexdobin_share": 0.92,
+   "other_authors": {
+    "JiyeonJeong01": 8
+   },
+   "sha256": "0a210c90766ae881f5469099ac86d4cf87fc4d51bdc40463a07b0b4d17a83b2c"
+  },
+  {
+   "path": "Engine/Code/CGameObject.cpp",
+   "lines": 206,
+   "soexdobin_lines": 143,
+   "soexdobin_share": 0.69,
+   "other_authors": {
+    "JiyeonJeong01": 63
+   },
+   "sha256": "ae71e30b5cc02ddab2701c666abe0b4d5df98f566f3b772f211d5e8a54e50cfc"
+  },
+  {
+   "path": "Engine/Code/CGraphicDevice.cpp",
+   "lines": 107,
+   "soexdobin_lines": 107,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "03ce52e9034146b23aa09835d7bed9fe6afef88023c73cf345df8d13efe64c5d"
+  },
+  {
+   "path": "Engine/Code/CLayer.cpp",
+   "lines": 176,
+   "soexdobin_lines": 130,
+   "soexdobin_share": 0.74,
+   "other_authors": {
+    "JiyeonJeong01": 46
+   },
+   "sha256": "42bc3ddc182e3aabe210a47ede5a81c0e7465a9de99ed9a21a6cb661230dd5c2"
+  },
+  {
+   "path": "Engine/Code/CLayerHelper.cpp",
+   "lines": 16,
+   "soexdobin_lines": 16,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "0cd7998d6a641b50eb8bbc84472a11152c1da2d3c57ffc349cd7577892328f1b"
+  },
+  {
+   "path": "Engine/Code/CLight.cpp",
+   "lines": 45,
+   "soexdobin_lines": 45,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "4ad1d6fdc9419a7cc1894c805d93614a2d5b2009de0d515e380dd659a1d619e9"
+  },
+  {
+   "path": "Engine/Code/CLightManager.cpp",
+   "lines": 29,
+   "soexdobin_lines": 29,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "8e2bd94f3b2968aadd233aeb57b0703412c2d9264445e6e272db40165633e086"
+  },
+  {
+   "path": "Engine/Code/CManagement.cpp",
+   "lines": 209,
+   "soexdobin_lines": 209,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "b80500f87ca9e22911b17b9ac47f9f23f07fe9867e307e0dabd6fcbaab17ffa6"
+  },
+  {
+   "path": "Engine/Code/CNonRenderObject.cpp",
+   "lines": 54,
+   "soexdobin_lines": 54,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "b07d240983c442ee01a856ea03cc9c27097a93343990517f868d111b0be3f527"
+  },
+  {
+   "path": "Engine/Code/CPanel.cpp",
+   "lines": 40,
+   "soexdobin_lines": 40,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "2f9b043e04e9170448c89dadef9f62ce2e26fe48e03a0613821ac6da47fa34e9"
+  },
+  {
+   "path": "Engine/Code/CPrototypeManager.cpp",
+   "lines": 114,
+   "soexdobin_lines": 114,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "8c33165806d504e6ee3c6ac7b04f21ce6eb5ea9885c5aa024b8a3c60695b0e2b"
+  },
+  {
+   "path": "Engine/Code/CRectCollider.cpp",
+   "lines": 194,
+   "soexdobin_lines": 194,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "4331290b3a57a2189163365b64fea938a3bdccfcab4753c8456965eec41fb4bf"
+  },
+  {
+   "path": "Engine/Code/CRectColor.cpp",
+   "lines": 96,
+   "soexdobin_lines": 96,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "a287740ed276f931d151f10591e604b062024bccccadcf5032b8da07a4a075e3"
+  },
+  {
+   "path": "Engine/Code/CRectTex.cpp",
+   "lines": 98,
+   "soexdobin_lines": 98,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "37502557ca1c771220bb99bffbefc5f91a9bebc59b91d7213e5484c10f68878c"
+  },
+  {
+   "path": "Engine/Code/CRenderObject.cpp",
+   "lines": 82,
+   "soexdobin_lines": 82,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "f52f612e4c2c40e94d92dfba6e5ac13b621bb678a87267eb018929ded283a5f1"
+  },
+  {
+   "path": "Engine/Code/CRenderer.cpp",
+   "lines": 165,
+   "soexdobin_lines": 97,
+   "soexdobin_share": 0.59,
+   "other_authors": {
+    "LCrim": 43,
+    "JiyeonJeong01": 4,
+    "chaerim": 21
+   },
+   "sha256": "b4d3773e5b261be9781bec27b481f9008668324c75d996ada4d987192af1974a"
+  },
+  {
+   "path": "Engine/Code/CResourceManager.cpp",
+   "lines": 78,
+   "soexdobin_lines": 78,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "b9ec6ee07f9b058018666a4df30fde3afa07f31a3a3a299be2a6a150b5569184"
+  },
+  {
+   "path": "Engine/Code/CScene.cpp",
+   "lines": 135,
+   "soexdobin_lines": 134,
+   "soexdobin_share": 0.99,
+   "other_authors": {
+    "JiyeonJeong01": 1
+   },
+   "sha256": "4f5fe6f4b0d84eb85f24fde5a0e8dcad9ebff8adde22712907c37eeef3ded960"
+  },
+  {
+   "path": "Engine/Code/CSoundManager.cpp",
+   "lines": 271,
+   "soexdobin_lines": 270,
+   "soexdobin_share": 1.0,
+   "other_authors": {
+    "JiyeonJeong01": 1
+   },
+   "sha256": "ccfd134d18833b96f878cf4bf7df49f01e780c0d89a3f8d374ebcd8eda333ef3"
+  },
+  {
+   "path": "Engine/Code/CSphereCollider.cpp",
+   "lines": 198,
+   "soexdobin_lines": 198,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "25e9c38ae43e1763700063fe537580dd1e70e7c9e5c38e23c8288d4024e87150"
+  },
+  {
+   "path": "Engine/Code/CTerrainTex.cpp",
+   "lines": 162,
+   "soexdobin_lines": 150,
+   "soexdobin_share": 0.93,
+   "other_authors": {
+    "Trevorjun": 12
+   },
+   "sha256": "4de7c6ab20ce683b4b666ce58f9eeea4ac744dfbc46bc8fbeaf0952f341d7aa2"
+  },
+  {
+   "path": "Engine/Code/CTexture.cpp",
+   "lines": 157,
+   "soexdobin_lines": 140,
+   "soexdobin_share": 0.89,
+   "other_authors": {
+    "JiyeonJeong01": 17
+   },
+   "sha256": "93b168035d2de3e959aad6903eaeff01cc14e874f7e8f1a45e6501f86a08e5e8"
+  },
+  {
+   "path": "Engine/Code/CTimeManager.cpp",
+   "lines": 79,
+   "soexdobin_lines": 79,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "e496fe0b83645c957e46bbd1613cfd77c10c05f9fda2c9d10768b25031abd32f"
+  },
+  {
+   "path": "Engine/Code/CTimer.cpp",
+   "lines": 51,
+   "soexdobin_lines": 51,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "8cebf3045d50b0ac15d1e35ea3774e5aab60073f9bc4b73256c355a4a7682554"
+  },
+  {
+   "path": "Engine/Code/CTransform.cpp",
+   "lines": 154,
+   "soexdobin_lines": 154,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "174b8ab1977d2ebb50ea0d1231e06eaf0b0cc82898debffdebd6e3253345f780"
+  },
+  {
+   "path": "Engine/Code/CVIBuffer.cpp",
+   "lines": 100,
+   "soexdobin_lines": 100,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "02f81e51ece5b8d39bc37bfb6a57de39b16ceb12d6bba7fc1ceadf06b3f4d8a2"
+  },
+  {
+   "path": "Engine/Code/TagLayerMask.cpp",
+   "lines": 27,
+   "soexdobin_lines": 27,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "9a6de9986db9758707db82797adb89bfb7d9acd9432394c0775bed5df3c831db"
+  },
+  {
+   "path": "Engine/Header/CCollider.h",
+   "lines": 82,
+   "soexdobin_lines": 80,
+   "soexdobin_share": 0.98,
+   "other_authors": {
+    "JiyeonJeong01": 2
+   },
+   "sha256": "c4d7fd7c7d09d1a8ec680c9f0a5f4c18b89d8da5cc2e478b1b1b88c982a727ee"
+  },
+  {
+   "path": "Engine/Header/CCollisionManager.h",
+   "lines": 43,
+   "soexdobin_lines": 43,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "5346319efd116f61119cb71681fcf292de340a8349f898869eb898950f04bea0"
+  },
+  {
+   "path": "Engine/Header/CComponent.h",
+   "lines": 62,
+   "soexdobin_lines": 53,
+   "soexdobin_share": 0.85,
+   "other_authors": {
+    "JiyeonJeong01": 9
+   },
+   "sha256": "f66cf9bcdc39ba5af951ad44c0ced507b233eeee4c078b23cc80ec688e5d64a5"
+  },
+  {
+   "path": "Engine/Header/CCubeTex.h",
+   "lines": 28,
+   "soexdobin_lines": 28,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "f87fffb5a318d04eff7c341316c4aa453e6a044ee04297eccf4296a3cfcb29fd"
+  },
+  {
+   "path": "Engine/Header/CDInputManager.h",
+   "lines": 69,
+   "soexdobin_lines": 54,
+   "soexdobin_share": 0.78,
+   "other_authors": {
+    "LeeSunJae": 15
+   },
+   "sha256": "85b25fa8788b5a714ecfe7e26bb89af44d594a049aafdc3b6928a0cb2cc8ad3b"
+  },
+  {
+   "path": "Engine/Header/CEditor.h",
+   "lines": 68,
+   "soexdobin_lines": 58,
+   "soexdobin_share": 0.85,
+   "other_authors": {
+    "JiyeonJeong01": 10
+   },
+   "sha256": "6c888a4f7c0f089490bf422fb7dbc4e00192564826b8cb564f5d2f60314f4bc5"
+  },
+  {
+   "path": "Engine/Header/CFont.h",
+   "lines": 42,
+   "soexdobin_lines": 40,
+   "soexdobin_share": 0.95,
+   "other_authors": {
+    "LCrim": 2
+   },
+   "sha256": "0952f53f0ab5f533156654324c9797a70fe5492c099191c1e73f59f3810b5f53"
+  },
+  {
+   "path": "Engine/Header/CFrame.h",
+   "lines": 31,
+   "soexdobin_lines": 31,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "ea082a003191d7ff5bc2873d179bc0075bbfabf4762318ee57114749242b6260"
+  },
+  {
+   "path": "Engine/Header/CFrameManager.h",
+   "lines": 59,
+   "soexdobin_lines": 54,
+   "soexdobin_share": 0.92,
+   "other_authors": {
+    "JiyeonJeong01": 5
+   },
+   "sha256": "686f85e05e57aea2cb1e0f1d992553a30939bddab794283e84d1f565a6c145ea"
+  },
+  {
+   "path": "Engine/Header/CGameObject.h",
+   "lines": 148,
+   "soexdobin_lines": 120,
+   "soexdobin_share": 0.81,
+   "other_authors": {
+    "JiyeonJeong01": 21,
+    "chaerim": 7
+   },
+   "sha256": "f544885f77f8e2dad77560d4c0158e97297f6b0869a4b542a5dd9210e1d3a67b"
+  },
+  {
+   "path": "Engine/Header/CGraphicDevice.h",
+   "lines": 37,
+   "soexdobin_lines": 37,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "8e023bbc71f2cb052070b96dd92e4f26ae3eca13a2057f69e7393137b7f05261"
+  },
+  {
+   "path": "Engine/Header/CLayer.h",
+   "lines": 48,
+   "soexdobin_lines": 37,
+   "soexdobin_share": 0.77,
+   "other_authors": {
+    "JiyeonJeong01": 11
+   },
+   "sha256": "b02c617c7bb334f0c1833a906c75a107358632fd596bbd6bd2fa3451333d22d9"
+  },
+  {
+   "path": "Engine/Header/CLayerHelper.h",
+   "lines": 119,
+   "soexdobin_lines": 115,
+   "soexdobin_share": 0.97,
+   "other_authors": {
+    "JiyeonJeong01": 4
+   },
+   "sha256": "e12cf0fd3e7e83e4f9e00e1f04d6f64b51384b2e4bddf289859c8a66436a0df9"
+  },
+  {
+   "path": "Engine/Header/CLight.h",
+   "lines": 28,
+   "soexdobin_lines": 28,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "47d7d5cfd42ce889b41f6cb43bb004c3df1b051cc4739c87530cf9933f326258"
+  },
+  {
+   "path": "Engine/Header/CLightManager.h",
+   "lines": 27,
+   "soexdobin_lines": 27,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "137c097c1c4f68265ef52d0c7cb9ad1b14d086ab95aa35e43b1a2c415dd981b6"
+  },
+  {
+   "path": "Engine/Header/CManagement.h",
+   "lines": 57,
+   "soexdobin_lines": 55,
+   "soexdobin_share": 0.96,
+   "other_authors": {
+    "chaerim": 2
+   },
+   "sha256": "26658716bf46192bcee56124f444a116cd4cb1e4513e515b24f37ee586d6d850"
+  },
+  {
+   "path": "Engine/Header/CNonRenderObject.h",
+   "lines": 47,
+   "soexdobin_lines": 47,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "58aa1635137a2d80a43814e7fec218fc8607e40c26be97e87003ddf9170cce6d"
+  },
+  {
+   "path": "Engine/Header/CPanel.h",
+   "lines": 44,
+   "soexdobin_lines": 44,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "c0dae4ea892507c75b13b40dc661e509d9570f28c3af71b162ab354c0f967ccc"
+  },
+  {
+   "path": "Engine/Header/CPrototypeManager.h",
+   "lines": 46,
+   "soexdobin_lines": 42,
+   "soexdobin_share": 0.91,
+   "other_authors": {
+    "Trevorjun": 4
+   },
+   "sha256": "b5bd425c61af259bcd2cf4631f0798a80bed6fe10e9ed2e9b4b1e393270f2a68"
+  },
+  {
+   "path": "Engine/Header/CRectCollider.h",
+   "lines": 52,
+   "soexdobin_lines": 50,
+   "soexdobin_share": 0.96,
+   "other_authors": {
+    "JiyeonJeong01": 2
+   },
+   "sha256": "f3eb2bfa9fd3d0cdbc17f3e02829a94001709453a8203bff01aad0db57618bc5"
+  },
+  {
+   "path": "Engine/Header/CRectColor.h",
+   "lines": 29,
+   "soexdobin_lines": 29,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "716648cd0ed776ad651228a7f41924fa6b9663a090770a0462e5cb2bff792762"
+  },
+  {
+   "path": "Engine/Header/CRectTex.h",
+   "lines": 28,
+   "soexdobin_lines": 28,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "d86d5a9d6b6c2550a708f1966576b4dd153207b8729389dce66e88951cc4d912"
+  },
+  {
+   "path": "Engine/Header/CRenderObject.h",
+   "lines": 50,
+   "soexdobin_lines": 47,
+   "soexdobin_share": 0.94,
+   "other_authors": {
+    "LCrim": 1,
+    "chaerim": 2
+   },
+   "sha256": "5bf00d23dfc7bed5c9a928488df30ec46eada719cb0c4801b59e62769a294ddd"
+  },
+  {
+   "path": "Engine/Header/CRenderer.h",
+   "lines": 38,
+   "soexdobin_lines": 37,
+   "soexdobin_share": 0.97,
+   "other_authors": {
+    "chaerim": 1
+   },
+   "sha256": "225363db9f065b31e3d6698c58b4d8a981bffb10087be24de3cc740b2694afe1"
+  },
+  {
+   "path": "Engine/Header/CResourceManager.h",
+   "lines": 30,
+   "soexdobin_lines": 30,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "3d0930dc4c3e747d867bf1bce500860836fd0499fb4acd7e8293bf3324f748b1"
+  },
+  {
+   "path": "Engine/Header/CScene.h",
+   "lines": 46,
+   "soexdobin_lines": 46,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "965878a97c667559dd43ea2f9d12c5b653fc06a3740bf7b052b00faccffac07c"
+  },
+  {
+   "path": "Engine/Header/CSoundManager.h",
+   "lines": 43,
+   "soexdobin_lines": 42,
+   "soexdobin_share": 0.98,
+   "other_authors": {
+    "JiyeonJeong01": 1
+   },
+   "sha256": "06ba504301d6c0bb1288b63175102786f239405b6e406ec8e00dfa7890671b14"
+  },
+  {
+   "path": "Engine/Header/CSphereCollider.h",
+   "lines": 52,
+   "soexdobin_lines": 51,
+   "soexdobin_share": 0.98,
+   "other_authors": {
+    "JiyeonJeong01": 1
+   },
+   "sha256": "9aac95f9dd4251121d147498f040d64a3735fa770978b6b60ef462e4f5509352"
+  },
+  {
+   "path": "Engine/Header/CTerrainTex.h",
+   "lines": 55,
+   "soexdobin_lines": 50,
+   "soexdobin_share": 0.91,
+   "other_authors": {
+    "Trevorjun": 5
+   },
+   "sha256": "f57128c8598e03339632beaaa4af2fc70aeda4ca4ea3c5e35400d0d93a1a96d2"
+  },
+  {
+   "path": "Engine/Header/CTexture.h",
+   "lines": 70,
+   "soexdobin_lines": 61,
+   "soexdobin_share": 0.87,
+   "other_authors": {
+    "chaerim": 3,
+    "JiyeonJeong01": 6
+   },
+   "sha256": "156fef6ab2323c04fe343d44a8d30dada20d0d87b01db9f93086486438417a44"
+  },
+  {
+   "path": "Engine/Header/CTimeManager.h",
+   "lines": 31,
+   "soexdobin_lines": 31,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "3b62ca45ca7d311fff314808ebaab3d299145560b5f39e56df6d4308669c6398"
+  },
+  {
+   "path": "Engine/Header/CTimer.h",
+   "lines": 36,
+   "soexdobin_lines": 36,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "ba9f7766f2e882359e5e590060703ab14e26b99779451f8fcb6694f864e4be17"
+  },
+  {
+   "path": "Engine/Header/CTransform.h",
+   "lines": 66,
+   "soexdobin_lines": 60,
+   "soexdobin_share": 0.91,
+   "other_authors": {
+    "JiyeonJeong01": 6
+   },
+   "sha256": "1da229a7e07158ab2745f2094d2f7f111b3079152905e87c8c51b3ee67b2fa01"
+  },
+  {
+   "path": "Engine/Header/CVIBuffer.h",
+   "lines": 40,
+   "soexdobin_lines": 40,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "935632dc3a45d6dc89bf9c6536cfd13955b2b4ad05c0bb3ce5aba39f58ea1ab2"
+  },
+  {
+   "path": "Engine/Header/Engine_Define.h",
+   "lines": 69,
+   "soexdobin_lines": 53,
+   "soexdobin_share": 0.77,
+   "other_authors": {
+    "JiyeonJeong01": 16
+   },
+   "sha256": "5a7fadaccb47c838584ee5fca3d1ed13761edb1e52bb02c511be00038f1fb88d"
+  },
+  {
+   "path": "Engine/Header/Engine_Enum.h",
+   "lines": 119,
+   "soexdobin_lines": 106,
+   "soexdobin_share": 0.89,
+   "other_authors": {
+    "JiyeonJeong01": 7,
+    "Trevorjun": 6
+   },
+   "sha256": "66562894f4b635414f1f9baf12fd107e23e11b3ff237a804d6bd00f561afd2c6"
+  },
+  {
+   "path": "Engine/Header/Engine_Function.h",
+   "lines": 108,
+   "soexdobin_lines": 108,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "424628ae6fa8470e6f40dc0f62237b584f9d0487eb4c4ad3dd32203f58b7f98a"
+  },
+  {
+   "path": "Engine/Header/Engine_Macro.h",
+   "lines": 84,
+   "soexdobin_lines": 81,
+   "soexdobin_share": 0.96,
+   "other_authors": {
+    "Trevorjun": 3
+   },
+   "sha256": "1a4dc5bd25b4421c3617cf2d02a9c5db2b806fd6f216abd976696adb5b4d7d54"
+  },
+  {
+   "path": "Engine/Header/Engine_Struct.h",
+   "lines": 55,
+   "soexdobin_lines": 55,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "83dc3f15c6901d26d2c40d121616e410267c600a42dde22c31429e75f0840115"
+  },
+  {
+   "path": "Engine/Header/Engine_Typedef.h",
+   "lines": 40,
+   "soexdobin_lines": 40,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "667a61f47aaaf8440b2ada15302e6b444060d4c56e36ece586e99211a0bf6d5d"
+  },
+  {
+   "path": "Engine/Header/ImGui_Define.h",
+   "lines": 18,
+   "soexdobin_lines": 15,
+   "soexdobin_share": 0.83,
+   "other_authors": {
+    "JiyeonJeong01": 3
+   },
+   "sha256": "4af4a6df6fa354c6b08efb3a497d57c8bb417d95ce1d138049cd5a2119912b66"
+  },
+  {
+   "path": "Engine/Header/TagLayerMask.h",
+   "lines": 20,
+   "soexdobin_lines": 20,
+   "soexdobin_share": 1.0,
+   "other_authors": {},
+   "sha256": "b536975df2daa2589867e2455702e6a69cbf981060ec8a30e5ed5b24fffcecee"
+  }
+ ]
+}

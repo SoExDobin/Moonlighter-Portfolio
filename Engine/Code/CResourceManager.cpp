@@ -1,0 +1,78 @@
+﻿#include "CResourceManager.h"
+
+IMPLEMENT_SINGLETON(CResourceManager)
+
+CResourceManager::CResourceManager()
+{
+}
+
+CResourceManager::~CResourceManager()
+{
+    Free();
+}
+
+
+HRESULT CResourceManager::Add_Sprite(LPDIRECT3DDEVICE9 pGraphicDev, const wstring& wsKey, const wstring& wsPath, _uint iFrameCnt, _uint iStartOffset)
+{
+    m_umapSprite.insert({ wsKey, vector<IDirect3DBaseTexture9*>()});
+    m_umapSprite[wsKey].reserve(iFrameCnt);
+    IDirect3DBaseTexture9* pTexture = nullptr;
+
+    for (_uint i = iStartOffset; i < iFrameCnt + iStartOffset; ++i)
+    {
+        D3DXIMAGE_INFO tInfo;
+        TCHAR   szFileName[256] = L"";
+        wsprintf(szFileName, wsPath.c_str(), i);
+
+        if (FAILED(D3DXGetImageInfoFromFileW(szFileName, &tInfo)))
+            return E_FAIL;
+
+        if (FAILED(D3DXCreateTextureFromFileExW(
+            pGraphicDev,
+            szFileName,
+            tInfo.Width, tInfo.Height,
+            1,                             
+            0,                             
+            D3DFMT_A8R8G8B8,               
+            D3DPOOL_MANAGED,
+            D3DX_FILTER_LINEAR,
+            D3DX_FILTER_LINEAR,
+            0,        // ★ 검정색을 투명으로
+            &tInfo,
+            nullptr,
+            (PDIRECT3DTEXTURE9*)&pTexture)))
+        {
+            return E_FAIL;
+        }
+       
+        m_umapSprite[wsKey].push_back(pTexture);
+    }
+
+    return S_OK;
+}
+
+HRESULT CResourceManager::Add_Cube(LPDIRECT3DDEVICE9 pGraphicDev, const wstring& swKey, const wstring& swPath)
+{
+    return S_OK;
+}
+
+const vector<IDirect3DBaseTexture9*>& CResourceManager::Get_Sprite(const wstring& swKey)
+{
+    for (_uint i = 0; i < m_umapSprite[swKey].size(); ++i)
+        m_umapSprite[swKey][i]->AddRef();
+
+    return m_umapSprite[swKey];
+}
+
+void CResourceManager::Free()
+{
+    for_each(m_umapSprite.begin(), m_umapSprite.end(), 
+        [](pair<const wstring, vector<IDirect3DBaseTexture9*>>& pair) -> void {
+        for_each(pair.second.begin(), pair.second.end(), CDeleteObj());
+        });
+
+    for_each(m_umapCube.begin(), m_umapCube.end(), 
+        [](pair<const wstring, vector<IDirect3DCubeTexture9*>>& pair) -> void {
+        for_each(pair.second.begin(), pair.second.end(), CDeleteObj());
+        });
+}
