@@ -10,10 +10,10 @@
 | 항목 | 내용 |
 | --- | --- |
 | 개발 기간 | 2025.11 ~ 12 |
-| 제작 | 5인 팀 · 학습 목적 모작 |
-| 개발 환경 | C++ · DirectX 9 · D3DX9 |
-| 라이브러리 | DirectInput 8 · FMOD · ImGui |
-| 담당 | Engine 프레임워크(GameObject · Component · Layer · 충돌 · Scene 전환) · Client 사막 던전 보스 |
+| 제작 | 5인 팀, 학습 목적 모작 |
+| 개발 환경 | C++, DirectX 9, D3DX9 |
+| 라이브러리 | DirectInput 8, FMOD, ImGui |
+| 담당 | Engine 프레임워크(GameObject, Component, Layer, 충돌, Scene 전환), Client 사막 던전 보스 |
 
 ## 담긴 코드
 
