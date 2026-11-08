@@ -1,6 +1,6 @@
 # Moonlighter-Portfolio
 
-《Moonlighter》를 DirectX 9 자체 엔진으로 옮긴 5인 팀 학습용 모작(2025.11.14 ~ 12.22)에서 제가 맡은 코드를 모은 공개본입니다. 원본은 팀 비공개 저장소 `Moonlighter-DX9`의 `develop`(`40e6c13`)이고, 파일 경로는 원본과 같습니다.
+《Moonlighter》를 DirectX 9 자체 엔진으로 옮긴 5인 팀 학습용 모작(2025.11 ~ 12)에서 제가 맡은 코드를 모은 공개본입니다. 원본은 팀 비공개 저장소 `Moonlighter-DX9`이고, 파일 경로는 원본과 같습니다.
 
 - 포트폴리오 페이지: https://soexdobin.xyz/projects/moonlighter/
 - 시연 영상: https://www.youtube.com/watch?v=h-GAey4My9A
